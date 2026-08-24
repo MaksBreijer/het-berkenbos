@@ -4,10 +4,10 @@ import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
 const seasons = [
-  { number: '01', name: 'Lente', line: 'Alles begint weer.', text: 'Fris groen, vroege zon en het berkenbos dat elke ochtend een beetje voller klinkt.', image: '/instagram-lente.jpg', position: 'center' },
-  { number: '02', name: 'Zomer', line: 'De deuren blijven open.', text: 'Lange avonden buiten, koel gras aan je voeten en nergens haast voor nodig.', image: '/instagram-zomer.jpg', position: 'center' },
-  { number: '03', name: 'Herfst', line: 'Het landschap wordt goud.', text: 'Koperkleurige paden, een trui bij het ontbijt en thuiskomen in warm licht.', image: '/instagram-herfst.jpg', position: 'center' },
-  { number: '04', name: 'Winter', line: 'Stilte krijgt ruimte.', text: 'Heldere lucht, zilveren stammen en het prettige gevoel dat je nergens heen hoeft.', image: '/instagram-winter.jpg', position: 'center' },
+  { number: '01', name: 'Lente', line: 'Alles begint weer.', text: 'Fris groen, vroege zon en het berkenbos dat elke ochtend een beetje voller klinkt.', image: '/instagram-lente-upscaled.jpg', position: 'center' },
+  { number: '02', name: 'Zomer', line: 'De deuren blijven open.', text: 'Lange avonden buiten, koel gras aan je voeten en nergens haast voor nodig.', image: '/instagram-zomer-upscaled.jpg', position: 'center' },
+  { number: '03', name: 'Herfst', line: 'Het landschap wordt goud.', text: 'Koperkleurige paden, een trui bij het ontbijt en thuiskomen in warm licht.', image: '/instagram-herfst-upscaled.jpg', position: 'center' },
+  { number: '04', name: 'Winter', line: 'Stilte krijgt ruimte.', text: 'Heldere lucht, zilveren stammen en het prettige gevoel dat je nergens heen hoeft.', image: '/instagram-winter-upscaled.jpg', position: 'center' },
 ];
 
 export default function SeasonJourney() {

@@ -4,9 +4,9 @@ import ScrollProgress from './ScrollProgress';
 import SeasonJourney from './SeasonJourney';
 
 const experiences = [
-  { number: '01', eyebrow: 'Aankomen', title: 'Laat de dag maar los.', text: 'Zodra je het erf opdraait, verdwijnt het tempo. Eerst de lucht. Dan de bomen. Dan pas het huis.', image: '/instagram-landschap.jpg', alt: 'Het open landschap rond Het Berkenbos' },
-  { number: '02', eyebrow: 'Buiten leven', title: '3.000 m² om nergens heen te hoeven.', text: 'Ontbijten in de tuin, lezen tussen de berken en blijven zitten tot het licht achter de velden zakt.', image: '/instagram-buitenleven.jpg', alt: 'Buitenleven in de tuin van Het Berkenbos' },
-  { number: '03', eyebrow: 'Nacht', title: 'Stilte die je bijna kunt horen.', text: 'Geen hotelgang. Geen drukte. Alleen een rustige barnhouse, bomen voor het raam en een bed waar de ochtend mag wachten.', image: '/instagram-hero.jpg', alt: 'Avondlicht bij Het Berkenbos' },
+  { number: '01', eyebrow: 'Aankomen', title: 'Laat de dag maar los.', text: 'Zodra je het erf opdraait, verdwijnt het tempo. Eerst de lucht. Dan de bomen. Dan pas het huis.', image: '/instagram-landschap-upscaled.jpg', alt: 'Het open landschap rond Het Berkenbos' },
+  { number: '02', eyebrow: 'Buiten leven', title: '3.000 m² om nergens heen te hoeven.', text: 'Ontbijten in de tuin, lezen tussen de berken en blijven zitten tot het licht achter de velden zakt.', image: '/instagram-buitenleven-upscaled.jpg', alt: 'Buitenleven in de tuin van Het Berkenbos' },
+  { number: '03', eyebrow: 'Nacht', title: 'Stilte die je bijna kunt horen.', text: 'Geen hotelgang. Geen drukte. Alleen een rustige barnhouse, bomen voor het raam en een bed waar de ochtend mag wachten.', image: '/instagram-hero-upscaled.jpg', alt: 'Avondlicht bij Het Berkenbos' },
 ];
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
       <ScrollProgress />
       <nav className="nav" aria-label="Hoofdnavigatie">
         <a href="#seizoenen" aria-label="Het Berkenbos, naar boven"><Image src="/het-berkenbos-logo.png" alt="Het Berkenbos" width={180} height={78} className="logo" priority /></a>
-        <div className="navLinks"><a href="#verblijf">Ervaar</a><a href="#workshops">Workshops</a><a href="#seizoenen">Seizoenen</a></div>
+        <div className="navLinks"><a href="#binnenkijken">Binnenkijken</a><a href="#workshops">Workshops</a><a href="#seizoenen">Seizoenen</a></div>
         <a className="navCta" href="#reserveren">Reserveer <span>↗</span></a>
       </nav>
 
@@ -30,6 +30,15 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="stayGallery" id="binnenkijken">
+        <div className="galleryIntro"><p>Sfeerimpressie · Conceptbeelden</p><h2>Zo zou het<br /><em>kunnen voelen.</em></h2><span>Een eerste blik op de mogelijke sfeer van Het Berkenbos: eenvoudig, warm en verbonden met buiten. Deze beelden zijn ter inspiratie; de uiteindelijke inrichting en buitenzijde kunnen afwijken.</span></div>
+        <div className="galleryGrid">
+          <figure className="galleryLarge"><Image src="/sfeer-buiten.jpg" alt="Conceptbeeld van een ingetogen barnhouse tussen berken" fill sizes="(max-width: 780px) 100vw, 62vw" /><figcaption><b>01</b><span>Buiten</span></figcaption></figure>
+          <figure><Image src="/sfeer-woonkamer.jpg" alt="Conceptbeeld van een warme rustige woonkamer" fill sizes="(max-width: 780px) 100vw, 38vw" /><figcaption><b>02</b><span>Wonen</span></figcaption></figure>
+          <figure><Image src="/sfeer-slaapkamer.jpg" alt="Conceptbeeld van een rustige slaapkamer" fill sizes="(max-width: 780px) 100vw, 38vw" /><figcaption><b>03</b><span>Slapen</span></figcaption></figure>
+        </div>
+      </section>
+
       <section className="experienceReel" aria-label="Een verblijf bij Het Berkenbos">
         {experiences.map((experience) => (
           <article className="experienceScene" key={experience.number}>
@@ -41,7 +50,7 @@ export default function Home() {
       </section>
 
       <section className="workshops" id="workshops">
-        <div className="workshopImage"><Image src="/instagram-buitenleven.jpg" alt="Samen buiten bij Het Berkenbos" fill sizes="(max-width: 780px) 100vw, 50vw" /></div>
+        <div className="workshopImage"><Image src="/instagram-buitenleven-upscaled.jpg" alt="Samen buiten bij Het Berkenbos" fill sizes="(max-width: 780px) 100vw, 50vw" /></div>
         <div className="workshopCopy">
           <div className="workshopWord" aria-hidden="true">SAMEN</div>
           <p>Workshops · Op aanvraag</p>
@@ -53,19 +62,19 @@ export default function Home() {
       </section>
 
       <section className="hauwert" id="omgeving">
-        <Image src="/instagram-landschap.jpg" alt="Het West-Friese landschap bij Hauwert" fill sizes="100vw" /><div className="hauwertVeil" />
+        <Image src="/instagram-landschap-upscaled.jpg" alt="Het West-Friese landschap bij Hauwert" fill sizes="100vw" /><div className="hauwertVeil" />
         <div className="hauwertCoordinates"><span>HAUWERT</span><b>52.72° N<br />05.10° E</b></div>
         <div className="hauwertCopy"><p>III · De plek</p><h2>Vlak bij alles.<br /><em>Ver genoeg weg.</em></h2><span>Water, boomgaarden en eindeloze luchten maken zelfs een kleine wandeling groots.</span></div>
       </section>
 
       <section className="host" id="selma">
         <div className="hostLetter" aria-hidden="true">S</div>
-        <div className="hostPortrait"><Image src="/instagram-buitenleven.jpg" alt="De persoonlijke sfeer van Het Berkenbos" fill sizes="(max-width: 780px) 100vw, 42vw" /></div>
+        <div className="hostPortrait"><Image src="/instagram-buitenleven-upscaled.jpg" alt="De persoonlijke sfeer van Het Berkenbos" fill sizes="(max-width: 780px) 100vw, 42vw" /></div>
         <div className="hostCopy"><p>IV · Een woord van Selma</p><h2>Welkom,<br /><em>ik ben Selma.</em></h2><blockquote>“Ik maakte een plek waar ik zelf graag zou aankomen: mooi zonder opsmuk, verzorgd zonder afstand.”</blockquote><span>Selma Cool · eigenaresse & workshopbegeleider</span></div>
       </section>
 
       <section className="booking" id="reserveren">
-        <Image src="/instagram-hero.jpg" alt="Avond bij Het Berkenbos" fill sizes="100vw" className="bookingImage" /><div className="bookingShade" />
+        <Image src="/instagram-hero-upscaled.jpg" alt="Avond bij Het Berkenbos" fill sizes="100vw" className="bookingImage" /><div className="bookingShade" />
         <div className="bookingShell"><div className="bookingContent"><p>V · Jouw verblijf</p><h2>Wanneer kom<br /><em>jij tot rust?</em></h2><span>Reserveer rechtstreeks bij Selma. Geen omweg, geen boekingsplatform.</span></div><BookingForm /></div>
       </section>
 
