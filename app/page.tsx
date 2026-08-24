@@ -23,7 +23,7 @@ export default function Home() {
         <Image src="/instagram-hero.jpg" alt="Zonsondergang bij Het Berkenbos in Hauwert" fill sizes="100vw" className="heroImage" priority />
         <div className="heroWash" /><div className="heroIndex"><span>52.72° N</span><span>05.10° E</span></div>
         <div className="heroContent">
-          <p>Een buitenverblijf van Selma Kool · Hauwert</p><h1>Het<br /><em>Berkenbos.</em></h1>
+          <p>Een buitenverblijf van Selma Cool · Hauwert</p><h1>Het<br /><em>Berkenbos.</em></h1>
           <div className="heroBottom"><span>Een barnhouse, 3.000 m² tuin<br />en een klein berkenbos.</span><a href="#verblijf">Volg het pad <b>↓</b></a></div>
         </div>
       </section>
@@ -53,8 +53,8 @@ export default function Home() {
           <div className="workshopWord" aria-hidden="true">SAMEN</div>
           <p>Workshops · Op aanvraag</p>
           <h2>Ruimte om<br /><em>samen te maken.</em></h2>
-          <span>Het Berkenbos is ook beschikbaar voor kleinschalige workshops. Een rustige plek voor groepen die willen creëren, verdiepen of samen werken — binnen én buiten.</span>
-          <div className="workshopFacts"><b>Kleine groepen</b><b>Programma op maat</b><b>Bespreekbaar met Selma</b></div>
+          <span>Selma Cool organiseert zelf kleinschalige workshops bij Het Berkenbos. Een rustige plek voor groepen die willen creëren, verdiepen of samen werken — binnen én buiten.</span>
+          <div className="workshopFacts"><b>Kleine groepen</b><b>Programma op maat</b><b>Door Selma georganiseerd</b></div>
           <a href="#reserveren">Vraag naar de mogelijkheden <b>→</b></a>
         </div>
       </section>
@@ -70,7 +70,7 @@ export default function Home() {
       <section className="host" id="selma">
         <div className="hostLetter" aria-hidden="true">S</div>
         <div className="hostPortrait"><Image src="/instagram-buitenleven.jpg" alt="De persoonlijke sfeer van Het Berkenbos" fill sizes="(max-width: 780px) 100vw, 42vw" /></div>
-        <div className="hostCopy"><p>IV · Een woord van Selma</p><h2>Welkom,<br /><em>ik ben Selma.</em></h2><blockquote>“Ik maakte een plek waar ik zelf graag zou aankomen: mooi zonder opsmuk, verzorgd zonder afstand.”</blockquote><span>Selma Kool · eigenaresse</span></div>
+        <div className="hostCopy"><p>IV · Een woord van Selma</p><h2>Welkom,<br /><em>ik ben Selma.</em></h2><blockquote>“Ik maakte een plek waar ik zelf graag zou aankomen: mooi zonder opsmuk, verzorgd zonder afstand.”</blockquote><span>Selma Cool · eigenaresse & workshopbegeleider</span></div>
       </section>
 
       <section className="booking" id="reserveren">
@@ -80,10 +80,10 @@ export default function Home() {
 
       <section className="faq" id="veelgestelde-vragen">
         <p>Goed om te weten</p><h2>Voor je<br /><em>vertrekt.</em></h2>
-        <div><details><summary>Waar ligt Het Berkenbos?<span>+</span></summary><p>In Hauwert, midden in het open landschap van West-Friesland in Noord-Holland. De exacte route ontvang je bij je reservering.</p></details><details><summary>Kan ik hier een workshop organiseren?<span>+</span></summary><p>Ja, Het Berkenbos biedt ruimte voor kleinschalige workshops op aanvraag. Vertel Selma via het reserveringsformulier wat je voor ogen hebt.</p></details><details><summary>Is het een blokhut?<span>+</span></summary><p>Nee. Het is een karaktervolle barnhouse met de eenvoud en warmte van een stuga, maar met een eigen architectuur.</p></details><details><summary>Hoe reserveer ik?<span>+</span></summary><p>Rechtstreeks op deze website. Kies je data en laat je gegevens achter; Selma bevestigt je aanvraag persoonlijk.</p></details></div>
+        <div><details><summary>Waar ligt Het Berkenbos?<span>+</span></summary><p>In Hauwert, midden in het open landschap van West-Friesland in Noord-Holland. De exacte route ontvang je bij je reservering.</p></details><details><summary>Kan ik hier een workshop volgen?<span>+</span></summary><p>Ja. Selma Cool organiseert zelf kleinschalige workshops bij Het Berkenbos. Vraag via het reserveringsformulier naar de mogelijkheden en actuele planning.</p></details><details><summary>Is het een blokhut?<span>+</span></summary><p>Nee. Het is een karaktervolle barnhouse met de eenvoud en warmte van een stuga, maar met een eigen architectuur.</p></details><details><summary>Hoe reserveer ik?<span>+</span></summary><p>Rechtstreeks op deze website. Kies je data en laat je gegevens achter; Selma bevestigt je aanvraag persoonlijk.</p></details></div>
       </section>
 
-      <footer><Image src="/het-berkenbos-logo.png" alt="Het Berkenbos" width={190} height={82} /><p>Een bijzonder buitenverblijf<br />in Hauwert van Selma Kool.</p><div><a href="#welkom">Naar boven ↑</a><a href="#reserveren">Reserveer je verblijf ↗</a></div><span>© 2026 Het Berkenbos</span></footer>
+      <footer><Image src="/het-berkenbos-logo.png" alt="Het Berkenbos" width={190} height={82} /><p>Een bijzonder buitenverblijf<br />in Hauwert van Selma Cool.</p><div><a href="#welkom">Naar boven ↑</a><a href="#reserveren">Reserveer je verblijf ↗</a></div><span>© 2026 Het Berkenbos</span></footer>
     </main>
   );
 }
