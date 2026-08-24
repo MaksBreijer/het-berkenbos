@@ -31,12 +31,14 @@ export default function Home() {
       </section>
 
       <section className="stayGallery" id="binnenkijken">
-        <div className="galleryIntro"><p>Sfeerimpressie · Conceptbeelden</p><h2>Zo zou het<br /><em>kunnen voelen.</em></h2><span>Een eerste blik op de mogelijke sfeer van Het Berkenbos: eenvoudig, warm en verbonden met buiten. Deze beelden zijn ter inspiratie; de uiteindelijke inrichting en buitenzijde kunnen afwijken.</span></div>
+        <div className="galleryIntro"><p>Binnenkijken · Sfeerimpressie</p><h2>Alsof je er<br /><em>al even bent.</em></h2><span>Van langzaam ontbijten tot uitgerust wakker worden: zo kan een verblijf in Het Berkenbos van binnen voelen. Dit zijn voorbeeldbeelden; het daadwerkelijke interieur kan afwijken.</span></div>
         <div className="galleryGrid">
-          <figure className="galleryLarge"><Image src="/sfeer-buiten.jpg" alt="Conceptbeeld van een ingetogen barnhouse tussen berken" fill sizes="(max-width: 780px) 100vw, 62vw" /><figcaption><b>01</b><span>Buiten</span></figcaption></figure>
-          <figure><Image src="/sfeer-woonkamer.jpg" alt="Conceptbeeld van een warme rustige woonkamer" fill sizes="(max-width: 780px) 100vw, 38vw" /><figcaption><b>02</b><span>Wonen</span></figcaption></figure>
-          <figure><Image src="/sfeer-slaapkamer.jpg" alt="Conceptbeeld van een rustige slaapkamer" fill sizes="(max-width: 780px) 100vw, 38vw" /><figcaption><b>03</b><span>Slapen</span></figcaption></figure>
+          <figure className="galleryLiving"><Image src="/sfeer-woonkamer.jpg" alt="Voorbeeldbeeld van een warme rustige woonkamer" fill sizes="(max-width: 780px) 100vw, 58vw" /><figcaption><b>01</b><span>Wonen · Licht & rustig</span></figcaption></figure>
+          <figure className="galleryKitchen"><Image src="/sfeer-keuken-v2.jpg" alt="Voorbeeldbeeld van de keuken en eethoek" fill sizes="(max-width: 780px) 100vw, 42vw" /><figcaption><b>02</b><span>Keuken · Samen ontbijten</span></figcaption></figure>
+          <figure className="galleryBathroom"><Image src="/sfeer-badkamer-v2.jpg" alt="Voorbeeldbeeld van een natuurlijke badkamer met inloopdouche" fill sizes="(max-width: 780px) 100vw, 42vw" /><figcaption><b>03</b><span>Badkamer · Fris beginnen</span></figcaption></figure>
+          <figure className="galleryBedroom"><Image src="/sfeer-slaapkamer.jpg" alt="Voorbeeldbeeld van een rustige slaapkamer" fill sizes="100vw" /><figcaption><b>04</b><span>Slapen · Wakker met de bomen</span></figcaption></figure>
         </div>
+        <div className="galleryClose"><p>Een huisje voor twee dagen.<br /><em>Een gevoel dat langer blijft.</em></p><a href="#reserveren">Bekijk jouw verblijf <span>→</span></a></div>
       </section>
 
       <section className="experienceReel" aria-label="Een verblijf bij Het Berkenbos">
