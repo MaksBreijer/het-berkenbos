@@ -3,11 +3,13 @@
 :root { --ink:#28322b; --dark:#17211b; --cream:#f2eee5; --sage:#c2b78e; --muted:#918f82; --line:rgba(40,50,43,.16); --serif:Georgia,'Times New Roman',serif; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
-body { margin:0; overflow-x:hidden; color:var(--ink); background:var(--dark); font-family:Arial,Helvetica,sans-serif; }
+body { margin:0; overflow-x:hidden; color:var(--ink); background:var(--dark); font-family:Arial,Helvetica,sans-serif; -webkit-text-size-adjust:100%; }
 a { color:inherit; text-decoration:none; }
 button,input,textarea { font:inherit; }
+button,a { touch-action:manipulation; }
 ::selection { color:var(--dark); background:var(--sage); }
 h1,h2,h3,p { margin-top:0; }
+.onePager section[id] { scroll-margin-top:92px; }
 .onePager { position:relative; }
 
 .nav { position:fixed; z-index:40; inset:12px 12px auto; height:72px; display:grid; grid-template-columns:200px 1fr auto; align-items:center; gap:28px; padding:0 clamp(16px,3vw,40px); border:1px solid rgba(255,255,255,.13); border-radius:8px; color:white; background:rgba(23,33,27,.76); backdrop-filter:blur(20px); }
@@ -170,22 +172,35 @@ footer img { object-fit:contain; filter:brightness(0) invert(1); }footer p { col
   footer { grid-template-columns:1fr 1fr; }
 }
 @media (max-width:780px) {
-  .nav { inset:7px 7px auto; height:72px; grid-template-columns:1fr auto; padding:0 14px; }.navLinks { display:none; }.logo { width:130px; height:58px; }.navCta { padding:12px 14px; font-size:7px; }
-  .scrollProgress { right:8px; }
-  .manifesto { height:160svh; }.manifestoSticky { padding-inline:22px; }.chapterLabel { left:22px; top:110px; }.manifestoWord { font-size:39vw; }.manifesto h2 { font-size:clamp(58px,17vw,90px); }.manifestoFacts { left:22px; right:22px; gap:12px; overflow:auto; }.manifestoFacts span { flex:none; }
-  .stayGallery { padding:100px 22px 80px; }.galleryIntro { grid-template-columns:1fr; align-items:start; gap:25px; margin-bottom:48px; }.galleryIntro h2 { font-size:clamp(58px,16vw,82px); }.galleryIntro>span { max-width:520px; }.galleryGrid { height:auto; min-height:0; grid-template-columns:1fr; grid-template-rows:none; gap:8px; }.galleryGrid figure,.galleryLiving,.galleryKitchen,.galleryBathroom,.galleryBedroom { grid-column:auto; grid-row:auto; aspect-ratio:3/2; }.galleryLiving,.galleryBedroom { aspect-ratio:4/5; }.galleryGrid figcaption { left:16px; right:16px; bottom:15px; }.galleryClose { align-items:flex-start; flex-direction:column; }.galleryClose a { width:100%; }
-  .sceneNumber { top:106px; }.sceneCopy { left:22px; right:22px; bottom:42px; }.sceneCopy h2 { font-size:clamp(57px,16vw,88px); }.sceneCopy>div { width:100%; margin:34px 0 0; flex-direction:column; align-items:flex-start; gap:22px; }
-  .workshops { grid-template-columns:1fr; }.workshopImage { min-height:62svh; }.workshopCopy { min-height:82svh; padding:100px 22px 80px; }.workshopCopy h2 { font-size:58px; }.workshopWord { top:7%; font-size:28vw; }
-  .seasonFixedCopy { left:22px; top:108px; }.seasonFixedCopy h2 { font-size:54px; }.seasonCounter { left:22px; bottom:28px; }.seasonSteps { width:100%; margin:-100svh 0 0; }.seasonSteps article { padding:0 22px 18vh; justify-content:flex-end; background:linear-gradient(0deg,rgba(5,11,7,.72),transparent 63%); }.seasonSteps h3 { max-width:85vw; font-size:55px; }.seasonSteps p { max-width:82vw; }
+  .nav { inset:7px 7px auto; height:66px; grid-template-columns:minmax(0,1fr) auto; gap:8px; padding:0 12px; }.navLinks { display:none; }.logo { width:126px; height:54px; }.navCta { min-height:42px; padding:11px 13px; gap:14px; font-size:7px; }
+  .scrollProgress { display:none; }
+  .manifesto { height:160svh; }.manifestoSticky { min-height:100dvh; padding-inline:22px; }.chapterLabel { left:22px; top:110px; }.manifestoWord { font-size:39vw; }.manifesto h2 { font-size:clamp(58px,17vw,90px); }.manifestoFacts { left:22px; right:22px; gap:12px; overflow:auto; }.manifestoFacts span { flex:none; }
+  .stayGallery { padding:100px 22px 80px; }.galleryIntro { grid-template-columns:1fr; align-items:start; gap:25px; margin-bottom:48px; }.galleryIntro h2 { font-size:clamp(58px,16vw,82px); }.galleryIntro>span { max-width:520px; }.galleryGrid { height:auto; min-height:0; grid-template-columns:1fr; grid-template-rows:none; gap:8px; }.galleryGrid figure,.galleryLiving,.galleryKitchen,.galleryBathroom,.galleryBedroom { grid-column:auto; grid-row:auto; aspect-ratio:3/2; }.galleryLiving,.galleryBedroom { aspect-ratio:4/5; }.galleryGrid figcaption { left:16px; right:16px; bottom:15px; gap:14px; }.galleryGrid figcaption span { max-width:75%; text-align:right; line-height:1.4; }.galleryClose { align-items:flex-start; flex-direction:column; }.galleryClose a { width:100%; min-height:46px; align-items:center; }
+  .experienceScene { min-height:100dvh; }.sceneNumber { top:96px; }.sceneCopy { left:22px; right:22px; bottom:max(38px,env(safe-area-inset-bottom)); }.sceneCopy h2 { max-width:100%; font-size:clamp(57px,16vw,88px); overflow-wrap:anywhere; }.sceneCopy>div { width:100%; margin:28px 0 0; flex-direction:column; align-items:flex-start; gap:20px; }.sceneCopy a { min-height:40px; align-items:center; }
+  .workshops { grid-template-columns:1fr; }.workshopImage { min-height:58svh; }.workshopCopy { min-height:auto; padding:94px 22px 76px; }.workshopCopy h2 { font-size:58px; }.workshopWord { top:7%; font-size:28vw; }.workshopCopy>a { min-height:48px; align-items:center; }
+  .seasonSticky { height:100dvh; }.seasonFixedCopy { left:22px; right:22px; top:98px; }.seasonFixedCopy h2 { font-size:52px; }.seasonCounter { left:22px; bottom:24px; }.seasonSteps { width:100%; margin:-100dvh 0 0; }.seasonSteps article { min-height:100dvh; padding:235px 22px max(110px,15vh); justify-content:flex-end; background:linear-gradient(0deg,rgba(5,11,7,.78),rgba(5,11,7,.08) 70%); }.seasonSteps h3 { max-width:88vw; font-size:55px; }.seasonSteps p { max-width:86vw; }.seasonSteps a { min-height:44px; align-items:center; }
   .hauwertCoordinates { left:22px; right:22px; top:110px; }.hauwertCoordinates span { font-size:25vw; }.hauwertCopy { left:22px; bottom:44px; }.hauwertCopy h2 { font-size:57px; }.hauwertCopy>span { margin:28px 0 0; }
   .host { grid-template-columns:1fr; gap:55px; padding:120px 22px 80px; }.hostPortrait { max-width:none; aspect-ratio:.88; }.hostCopy h2 { font-size:62px; }.hostLetter { font-size:150vw; }
-  .booking { align-items:end; }.bookingImage { object-position:center; }.bookingShell { width:min(100% - 20px,700px); padding:110px 0 12px; grid-template-columns:1fr; gap:38px; }.bookingContent { padding:0 12px; }.bookingContent h2 { font-size:58px; }.bookingContent>span { margin:28px 0 0; }.bookingForm,.bookingSuccess { padding:25px; }
+  .booking { min-height:100dvh; align-items:end; }.bookingImage { object-position:center; }.bookingShell { width:min(100% - 20px,700px); padding:110px 0 12px; grid-template-columns:1fr; gap:38px; }.bookingContent { padding:0 12px; }.bookingContent h2 { font-size:58px; }.bookingContent>span { margin:28px 0 0; }.bookingForm,.bookingSuccess { padding:25px; }.bookingForm input:not([type='checkbox']),.bookingForm textarea { min-height:44px; font-size:16px; }
   .faq { grid-template-columns:1fr; gap:42px; padding:110px 22px; }.faq>p { grid-column:auto; }.faq h2 { font-size:58px; }
   footer { grid-template-columns:1fr; gap:20px; }footer>span { margin-top:18px; }
 }
 @media (max-width:520px) {
   .formGrid { grid-template-columns:1fr; }.formGrid .wide { grid-column:auto; }.formIntro { align-items:flex-start; flex-direction:column; gap:7px; }
-  .seasonFixedCopy h2 { font-size:47px; }.seasonSteps h3 { font-size:49px; }.manifestoFacts { display:none; }
+  .seasonFixedCopy h2 { font-size:45px; }.seasonSteps article { padding-top:215px; }.seasonSteps h3 { font-size:47px; }.manifestoFacts { display:none; }
+}
+@media (max-width:420px) {
+  .nav { height:62px; padding-inline:10px; }.logo { width:112px; height:50px; }.navCta { min-height:40px; padding:10px 11px; gap:10px; }
+  .manifesto { height:145svh; }.manifestoSticky { padding-inline:18px; }.chapterLabel { left:18px; top:94px; }.manifesto h2 { font-size:52px; }.manifestoText { margin-top:30px; font-size:13px; }
+  .stayGallery { padding:88px 18px 70px; }.galleryIntro h2 { font-size:52px; }.galleryGrid .galleryLiving,.galleryGrid .galleryBedroom { aspect-ratio:4/5; }.galleryClose p { font-size:29px; }
+  .sceneNumber { top:88px; right:18px; font-size:38px; }.sceneCopy { left:18px; right:18px; }.sceneCopy h2 { font-size:48px; }.sceneCopy>div>span { font-size:12px; }.sceneCopy>p { margin-bottom:14px; }
+  .workshopImage { min-height:52svh; }.workshopCopy { padding:84px 18px 68px; }.workshopCopy h2 { font-size:50px; }.workshopCopy>span { margin-top:32px; font-size:13px; }
+  .seasonFixedCopy { left:18px; right:18px; top:88px; }.seasonFixedCopy h2 { font-size:41px; }.seasonSteps article { padding:200px 18px max(100px,13vh); }.seasonSteps h3 { font-size:43px; }.seasonSteps p { font-size:12px; }
+  .hauwertCoordinates { left:18px; right:18px; top:92px; }.hauwertCoordinates b { font-size:7px; }.hauwertCopy { left:18px; right:18px; bottom:38px; }.hauwertCopy h2 { font-size:49px; }
+  .host { gap:44px; padding:100px 18px 68px; }.hostCopy h2 { font-size:52px; }.hostCopy blockquote { margin-top:34px; font-size:22px; }
+  .bookingShell { width:calc(100% - 12px); padding-top:94px; gap:30px; }.bookingContent { padding:0 12px; }.bookingContent h2 { font-size:49px; }.bookingForm,.bookingSuccess { padding:20px 18px; border-radius:14px; }
+  .faq { padding:92px 18px; gap:34px; }.faq h2 { font-size:50px; }.faq summary { gap:18px; font-size:18px; }
+  footer { padding:42px 18px; }
 }
 @media (prefers-reduced-motion:reduce) {
   html { scroll-behavior:auto; }*,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; }.seasonImages img { transition:none; }
