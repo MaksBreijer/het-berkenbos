@@ -14,23 +14,16 @@ export default function Home() {
     <main className="onePager">
       <ScrollProgress />
       <nav className="nav" aria-label="Hoofdnavigatie">
-        <a href="#welkom" aria-label="Het Berkenbos, naar boven"><Image src="/het-berkenbos-logo.png" alt="Het Berkenbos" width={180} height={78} className="logo" priority /></a>
+        <a href="#seizoenen" aria-label="Het Berkenbos, naar boven"><Image src="/het-berkenbos-logo.png" alt="Het Berkenbos" width={180} height={78} className="logo" priority /></a>
         <div className="navLinks"><a href="#verblijf">Ervaar</a><a href="#workshops">Workshops</a><a href="#seizoenen">Seizoenen</a></div>
         <a className="navCta" href="#reserveren">Reserveer <span>↗</span></a>
       </nav>
 
-      <section className="hero" id="welkom">
-        <Image src="/instagram-lente.jpg" alt="Het open landschap en de bomen bij Het Berkenbos in Hauwert" fill sizes="100vw" className="heroImage" priority />
-        <div className="heroWash" />
-        <div className="heroContent">
-          <div className="heroTitle"><p>B&amp;B · Hauwert</p><h1>Het<br /><em>Berkenbos.</em></h1></div>
-          <div className="heroIntro"><span>Een plek om<br />te blijven.</span><p>Een barnhouse, 3.000 m² tuin en een klein berkenbos. Persoonlijk ontvangen door Selma Cool.</p><a href="#verblijf">Ontdek de plek <b>↓</b></a></div>
-        </div>
-      </section>
+      <SeasonJourney />
 
       <section className="manifesto" id="verblijf">
         <div className="manifestoSticky">
-          <p className="chapterLabel">I · Het gevoel</p><div className="manifestoWord" aria-hidden="true">NIETS</div>
+          <p className="chapterLabel">II · Het gevoel</p><div className="manifestoWord" aria-hidden="true">NIETS</div>
           <h2>Je hoeft hier<br /><em>helemaal niets.</em></h2>
           <p className="manifestoText">En precies daardoor ontstaat er ruimte voor alles wat thuis steeds wordt uitgesteld.</p>
           <div className="manifestoFacts"><span>3.000 m² buiten</span><span>Een klein berkenbos</span><span>Een eigenzinnige barnhouse</span></div>
@@ -59,8 +52,6 @@ export default function Home() {
         </div>
       </section>
 
-      <SeasonJourney />
-
       <section className="hauwert" id="omgeving">
         <Image src="/instagram-landschap.jpg" alt="Het West-Friese landschap bij Hauwert" fill sizes="100vw" /><div className="hauwertVeil" />
         <div className="hauwertCoordinates"><span>HAUWERT</span><b>52.72° N<br />05.10° E</b></div>
@@ -83,7 +74,7 @@ export default function Home() {
         <div><details><summary>Waar ligt Het Berkenbos?<span>+</span></summary><p>In Hauwert, midden in het open landschap van West-Friesland in Noord-Holland. De exacte route ontvang je bij je reservering.</p></details><details><summary>Kan ik hier een workshop volgen?<span>+</span></summary><p>Ja. Selma Cool organiseert zelf kleinschalige workshops bij Het Berkenbos. Vraag via het reserveringsformulier naar de mogelijkheden en actuele planning.</p></details><details><summary>Is het een blokhut?<span>+</span></summary><p>Nee. Het is een karaktervolle barnhouse met de eenvoud en warmte van een stuga, maar met een eigen architectuur.</p></details><details><summary>Hoe reserveer ik?<span>+</span></summary><p>Rechtstreeks op deze website. Kies je data en laat je gegevens achter; Selma bevestigt je aanvraag persoonlijk.</p></details></div>
       </section>
 
-      <footer><Image src="/het-berkenbos-logo.png" alt="Het Berkenbos" width={190} height={82} /><p>Een bijzonder buitenverblijf<br />in Hauwert van Selma Cool.</p><div><a href="#welkom">Naar boven ↑</a><a href="#reserveren">Reserveer je verblijf ↗</a></div><span>© 2026 Het Berkenbos</span></footer>
+      <footer><Image src="/het-berkenbos-logo.png" alt="Het Berkenbos" width={190} height={82} /><p>Een bijzonder buitenverblijf<br />in Hauwert van Selma Cool.</p><div><a href="#seizoenen">Naar boven ↑</a><a href="#reserveren">Reserveer je verblijf ↗</a></div><span>© 2026 Het Berkenbos</span></footer>
     </main>
   );
 }

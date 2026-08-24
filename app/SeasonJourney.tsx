@@ -35,7 +35,7 @@ export default function SeasonJourney() {
           ))}
         </div>
         <div className="seasonVeil" />
-        <div className="seasonFixedCopy"><p>II · Het jaar rond</p><h2>Vier seizoenen.<br /><em>Eén plek.</em></h2></div>
+        <div className="seasonFixedCopy"><p>I · Het jaar rond</p><h2>Vier seizoenen.<br /><em>Eén plek.</em></h2></div>
         <div className="seasonCounter" aria-live="polite"><strong>{seasons[active].number}</strong><span>/ 04</span></div>
       </div>
       <div className="seasonSteps">
