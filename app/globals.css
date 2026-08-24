@@ -21,7 +21,7 @@ h2 { margin: 0; font-family: var(--serif); font-size: clamp(50px, 6.3vw, 94px); 
 h2 em { color: #9c7342; font-weight: 400; }
 
 .hero { position: relative; min-height: 100svh; overflow: hidden; background: #182d24; color: #f8f0e3; }
-.heroImage { position: absolute; inset: 0; background: url('/het-berkenbos-hero.png') 58% center / cover; transform: scale(1.01); animation: heroBreath 12s ease-out both; }
+.heroImage { position: absolute; inset: 0; background: url('/instagram-hero.jpg') center 44% / cover; transform: scale(1.01); animation: heroBreath 12s ease-out both; }
 .heroWash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(9,28,21,.89) 0%, rgba(12,32,24,.63) 35%, rgba(12,27,20,.07) 71%), linear-gradient(0deg, rgba(8,20,15,.46), transparent 45%); }
 .nav { position: absolute; z-index: 4; inset: 0 0 auto; height: 112px; display: grid; grid-template-columns: 270px 1fr auto; align-items: center; gap: 36px; padding: 0 clamp(24px,5vw,76px); border-bottom: 1px solid rgba(255,255,255,.23); }
 .logo { display: block; width: 196px; height: 72px; object-fit: contain; object-position: left center; filter: brightness(0) invert(1); }
@@ -60,7 +60,7 @@ h1 em { color: #e2c699; font-weight: 400; }
 .storyBody .lead { margin-top: 0; color: var(--ink); font-family: var(--serif); font-size: clamp(26px,2.6vw,38px); line-height: 1.24; }
 .arrowLink { display: flex; justify-content: space-between; margin-top: 48px; padding: 18px 0; border-top: 1px solid rgba(23,51,40,.35); border-bottom: 1px solid rgba(23,51,40,.35); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .17em; }
 .arrowLink span { font-size: 18px; }
-.storyPhoto { position: relative; aspect-ratio: .78; margin-top: -25px; background: linear-gradient(rgba(20,38,30,.05),rgba(20,38,30,.2)), url('/het-berkenbos-hero.png') 72% center / cover; box-shadow: 22px 25px 0 #d8c9b2; }
+.storyPhoto { position: relative; aspect-ratio: .78; margin-top: -25px; background: linear-gradient(rgba(20,38,30,.03),rgba(20,38,30,.17)), url('/instagram-buitenleven.jpg') center / cover; box-shadow: 22px 25px 0 #d8c9b2; }
 .storyPhoto span { position: absolute; right: -20px; bottom: 24px; padding: 13px 15px; color: #e8dfd2; background: var(--ink); font-size: 8px; line-height: 1.6; letter-spacing: .16em; text-transform: uppercase; }
 
 .detailsBand { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(60px,10vw,160px); align-items: center; padding: clamp(80px,10vw,140px) clamp(24px,8vw,122px); color: #f1e8d9; background: var(--ink); }
@@ -75,10 +75,15 @@ h1 em { color: #e2c699; font-weight: 400; }
 .seasons { padding-top: clamp(110px,12vw,170px); background: #eee4d6; }
 .seasonsHeader { display: grid; grid-template-columns: 1.4fr .6fr; gap: 80px; align-items: end; padding-bottom: 74px; }
 .seasonsHeader > p { max-width: 380px; margin: 0 0 8px; color: #58665e; font-family: var(--serif); font-size: 18px; line-height: 1.65; }
-.seasonsPanorama { position: relative; height: min(55vw, 700px); min-height: 420px; background: url('/het-berkenbos-seizoenen.png') center / cover no-repeat; }
-.seasonsPanorama::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 25px 60px rgba(12,30,23,.13), inset 0 -30px 70px rgba(12,30,23,.25); }
-.seasonLabels { position: absolute; z-index: 2; inset: auto 0 0; display: grid; grid-template-columns: repeat(4, 1fr); color: white; font-family: var(--serif); font-size: 13px; font-style: italic; text-shadow: 0 1px 10px #000; }
-.seasonLabels span { padding: 24px 28px; border-right: 1px solid rgba(255,255,255,.3); }
+.seasonsPanorama { display: grid; grid-template-columns: repeat(4, 1fr); height: min(55vw, 700px); min-height: 420px; overflow: hidden; }
+.seasonPanel { position: relative; min-width: 0; overflow: hidden; background-position: center; background-size: cover; border-right: 1px solid rgba(255,255,255,.35); }
+.seasonPanel::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(12,30,23,.38), transparent 45%); transition: background .35s ease; }
+.seasonPanel:hover::after { background: linear-gradient(0deg, rgba(12,30,23,.22), transparent 42%); }
+.seasonPanel span { position: absolute; z-index: 2; left: 28px; bottom: 24px; color: white; font-family: var(--serif); font-size: 13px; font-style: italic; text-shadow: 0 1px 10px #000; }
+.springPhoto { background-image: url('/instagram-lente.jpg'); }
+.summerPhoto { background-image: url('/instagram-zomer.jpg'); }
+.autumnPhoto { background-image: url('/instagram-herfst.jpg'); }
+.winterPhoto { background-image: url('/instagram-winter.jpg'); }
 .seasonCards { display: grid; grid-template-columns: repeat(4, 1fr); }
 .seasonCard { position: relative; min-height: 440px; padding: 40px clamp(24px,3vw,50px); border-right: 1px solid rgba(23,51,40,.15); color: var(--ink); }
 .seasonCard.spring { background: #dce2bd; }.seasonCard.summer { color: #f5ead9; background: #234b36; }.seasonCard.autumn { color: #f7ead8; background: #895132; }.seasonCard.winter { background: #c9d0ce; }
@@ -89,7 +94,7 @@ h1 em { color: #e2c699; font-weight: 400; }
 .seasonCard a { position: absolute; left: clamp(24px,3vw,50px); right: clamp(24px,3vw,50px); bottom: 38px; display: flex; justify-content: space-between; padding-top: 14px; border-top: 1px solid currentColor; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; }
 
 .place { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(60px,10vw,150px); padding-top: clamp(110px,13vw,190px); padding-bottom: clamp(110px,13vw,190px); background: #f5eee4; }
-.placeImage { position: relative; min-height: 680px; background: linear-gradient(rgba(18,46,34,.08),rgba(18,46,34,.22)), url('/het-berkenbos-seizoenen.png') 39% center / auto 100%; }
+.placeImage { position: relative; min-height: 680px; background: linear-gradient(rgba(18,46,34,.04),rgba(18,46,34,.2)), url('/instagram-landschap.jpg') center / cover; }
 .placeImage::before { content: ''; position: absolute; left: -28px; top: -28px; width: 120px; height: 120px; border-top: 1px solid #a28760; border-left: 1px solid #a28760; }
 .placeImage > p { position: absolute; right: -45px; bottom: 42px; margin: 0; padding: 22px 26px; color: #f0e5d5; background: var(--ink); font-family: var(--serif); font-size: 17px; font-style: italic; line-height: 1.5; }
 .compass { position: absolute; z-index: 2; right: 26px; top: 24px; color: white; font-size: 9px; text-align: center; text-shadow: 0 1px 5px #000; }
@@ -113,7 +118,7 @@ h1 em { color: #e2c699; font-weight: 400; }
 
 .booking { position: relative; min-height: 880px; display: grid; place-items: center; color: white; }
 .bookingImage, .bookingShade { position: absolute; inset: 0; }
-.bookingImage { background: url('/het-berkenbos-hero.png') center / cover fixed; }
+.bookingImage { background: url('/instagram-hero.jpg') center 44% / cover fixed; }
 .bookingShade { background: rgba(8,31,22,.65); }
 .bookingContent { position: relative; z-index: 1; width: min(670px, calc(100% - 48px)); padding: 75px 70px; border: 1px solid rgba(255,255,255,.45); background: rgba(15,45,33,.63); text-align: center; backdrop-filter: blur(8px); }
 .bookingContent .eyebrow { justify-content: center; }
@@ -163,7 +168,7 @@ footer > span { align-self: end; color: rgba(255,255,255,.4); font-size: 8px; te
   .heroContent { margin-left: 24px; padding-top: 180px; }
   .heroIntro, .heroActions { margin-left: 0; }
   .heroNote, .scrollCue { display: none; }
-  .heroImage { background-position: 65% center; }
+  .heroImage { background-position: center 44%; }
   .promiseStrip { grid-template-columns: 1fr; padding: 10px 24px; }
   .promiseStrip p, .promiseStrip p:first-child { min-height: 56px; justify-content: flex-start; border: 0; border-bottom: 1px solid rgba(23,51,40,.15); }
   .story { grid-template-columns: 1fr; }
@@ -173,9 +178,9 @@ footer > span { align-self: end; color: rgba(255,255,255,.4); font-size: 8px; te
   .detailsList { grid-template-columns: 1fr; }
   .detailsList div, .detailsList div + div { min-height: 125px; padding: 22px 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.25); }
   .seasonsHeader { grid-template-columns: 1fr; gap: 40px; }
-  .seasonsPanorama { min-height: 330px; background-size: auto 100%; background-position: center; overflow-x: auto; }
-  .seasonLabels { font-size: 10px; }
-  .seasonLabels span { padding: 15px 8px; }
+  .seasonsPanorama { grid-template-columns: repeat(2, 1fr); height: auto; min-height: 0; }
+  .seasonPanel { min-height: 360px; }
+  .seasonPanel span { left: 18px; bottom: 16px; font-size: 12px; }
   .seasonCards { grid-template-columns: 1fr; }
   .seasonCard { min-height: 360px; }
   .place { grid-template-columns: 1fr; }
@@ -199,6 +204,8 @@ footer > span { align-self: end; color: rgba(255,255,255,.4); font-size: 8px; te
   .story, .place { padding-inline: 24px; }
   .seasonCards { display: block; }
   .placeImage { min-height: 440px; }
+  .seasonsPanorama { grid-template-columns: 1fr; }
+  .seasonPanel { min-height: 75vw; }
   .bookingContent h2 { font-size: 47px; }
 }
 

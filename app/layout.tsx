@@ -13,20 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Het Berkenbos — Bijzonder overnachten in Huarte',
-  description: 'Een warm, persoonlijk verblijf van Selma Kool tussen de berken in Huarte, Navarra.',
+  title: 'Het Berkenbos — Bijzonder overnachten in Hauwert',
+  description: 'Een warm, persoonlijk verblijf van Selma Kool met een grote tuin en klein berkenbos in Hauwert.',
   openGraph: {
     title: 'Het Berkenbos — Vier seizoenen. Eén plek om te blijven.',
-    description: 'Een warm, persoonlijk verblijf van Selma Kool tussen de berken in Huarte.',
+    description: 'Een warm, persoonlijk verblijf van Selma Kool tussen de berken in Hauwert.',
     type: 'website',
     locale: 'nl_NL',
-    images: [{ url: '/og.png', width: 1672, height: 941, alt: 'Het Berkenbos in Huarte' }],
+    images: [{ url: '/og.jpg', width: 1440, height: 1800, alt: 'Het landschap bij Het Berkenbos in Hauwert' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Het Berkenbos — Vier seizoenen. Eén plek om te blijven.',
-    description: 'Een warm, persoonlijk verblijf van Selma Kool tussen de berken in Huarte.',
-    images: ['/og.png'],
+    description: 'Een warm, persoonlijk verblijf van Selma Kool tussen de berken in Hauwert.',
+    images: ['/og.jpg'],
   },
 };
 

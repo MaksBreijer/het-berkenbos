@@ -16,7 +16,7 @@ export default function Home() {
           <div className="navLinks">
             <a href="#verblijf">Het verblijf</a>
             <a href="#seizoenen">Vier seizoenen</a>
-            <a href="#omgeving">Huarte</a>
+            <a href="#omgeving">Hauwert</a>
           </div>
           <a className="navCta" href="#reserveren">Bekijk beschikbaarheid</a>
         </nav>
@@ -24,7 +24,7 @@ export default function Home() {
         <div className="heroImage" aria-hidden="true" />
         <div className="heroWash" aria-hidden="true" />
         <div className="heroContent">
-          <p className="eyebrow">Huarte · Navarra · Spanje</p>
+          <p className="eyebrow">Hauwert · West-Friesland · Noord-Holland</p>
           <h1>Even verdwijnen.<br /><em>Precies hier.</em></h1>
           <p className="heroIntro">Een eigenzinnig, warm verblijf tussen de berken. Klein genoeg om persoonlijk te voelen. Groots genoeg om nog lang bij je te blijven.</p>
           <div className="heroActions">
@@ -37,18 +37,18 @@ export default function Home() {
       </section>
 
       <section className="promiseStrip" aria-label="Waarom Het Berkenbos">
-        <p><i>01</i> Persoonlijk ontvangen</p><p><i>02</i> Omringd door landschap</p><p><i>03</i> Elk seizoen bijzonder</p>
+        <p><i>01</i> Persoonlijk ontvangen</p><p><i>02</i> 3.000 m² tuin &amp; berkenbos</p><p><i>03</i> Elk seizoen bijzonder</p>
       </section>
 
       <section className="story sectionPad" id="verblijf">
         <div className="storyKicker reveal"><span>Het verblijf</span><b>Geen decor.<br />Een echt thuis.</b></div>
         <div className="storyBody reveal">
           <p className="lead">Sommige plekken laten je meteen langzamer lopen. Het Berkenbos is zo’n plek.</p>
-          <p>Geen gelikt hotel en geen blokhut uit een catalogus. Wel een karaktervol huis aan de rand van het groen, met natuurlijke materialen, rustige kamers en ramen die het landschap naar binnen halen.</p>
+          <p>Geen gelikt hotel en geen vakantiehuis uit een catalogus. Wel een eigenzinnige barnhouse aan de rand van het groen, met rustige kamers en ramen die het West-Friese landschap naar binnen halen.</p>
           <p>Selma maakte hier een verblijf dat voelt alsof het er altijd al was — eenvoudig, warm en met aandacht voor wat je nodig hebt om echt los te komen.</p>
           <a href="#reserveren" className="arrowLink">Dit wil ik ervaren <span>↗</span></a>
         </div>
-        <div className="storyPhoto reveal" role="img" aria-label="Het Berkenbos in het groene landschap"><span>Huarte<br />42.8° N</span></div>
+        <div className="storyPhoto reveal" role="img" aria-label="Buiten genieten bij Het Berkenbos"><span>Hauwert<br />Noord-Holland</span></div>
       </section>
 
       <section className="detailsBand">
@@ -65,8 +65,11 @@ export default function Home() {
           <div><p className="sectionNo">II · Het jaar rond</p><h2>Vier seizoenen.<br /><em>Eén goed gevoel.</em></h2></div>
           <p>Het Berkenbos verandert met het licht, de bladeren en de lucht. Scroll door een jaar en kies het moment dat bij jou past.</p>
         </header>
-        <div className="seasonsPanorama" role="img" aria-label="Het Berkenbos in lente, zomer, herfst en winter">
-          <div className="seasonLabels" aria-hidden="true"><span>Lente</span><span>Zomer</span><span>Herfst</span><span>Winter</span></div>
+        <div className="seasonsPanorama" aria-label="Het landschap rond Het Berkenbos in lente, zomer, herfst en winter">
+          <div className="seasonPanel springPhoto" role="img" aria-label="Lentelandschap bij Het Berkenbos"><span>Lente</span></div>
+          <div className="seasonPanel summerPhoto" role="img" aria-label="Zomeravond bij Het Berkenbos"><span>Zomer</span></div>
+          <div className="seasonPanel autumnPhoto" role="img" aria-label="Perenboom in de herfst bij Het Berkenbos"><span>Herfst</span></div>
+          <div className="seasonPanel winterPhoto" role="img" aria-label="Besneeuwd bos bij Het Berkenbos"><span>Winter</span></div>
         </div>
         <div className="seasonCards">
           {seasons.map((season) => (
@@ -79,12 +82,12 @@ export default function Home() {
       </section>
 
       <section className="place sectionPad" id="omgeving">
-        <div className="placeImage reveal"><div className="compass">N<br /><i>✦</i></div><p>Het ritme van het bos,<br />de ruimte van Navarra.</p></div>
+        <div className="placeImage reveal"><div className="compass">N<br /><i>✦</i></div><p>Het ritme van het bos,<br />de ruimte van West-Friesland.</p></div>
         <div className="placeCopy reveal">
-          <p className="sectionNo">III · Huarte</p><h2>Vlak bij alles.<br /><em>Ver genoeg weg.</em></h2>
+          <p className="sectionNo">III · Hauwert</p><h2>Vlak bij alles.<br /><em>Ver genoeg weg.</em></h2>
           <p className="lead">Hier begint de dag met vogels en eindigt hij met het laatste licht tussen de stammen.</p>
-          <p>Huarte ligt tussen groen, rivierpaden en de uitlopers van de Pyreneeën. Een landschap om te wandelen, te proeven en te bekijken — zonder dat je verblijf ooit als een tussenstop voelt.</p>
-          <div className="placeNotes"><span>bos &amp; rivier</span><span>heuvels &amp; vergezichten</span><span>cultuur dichtbij</span></div>
+          <p>Hauwert ligt midden in het open West-Friese land. Water, boomgaarden en eindeloze luchten maken zelfs een kleine wandeling groots — zonder dat je verblijf ooit als een tussenstop voelt.</p>
+          <div className="placeNotes"><span>3.000 m² tuin</span><span>klein berkenbos</span><span>West-Friese vergezichten</span></div>
         </div>
       </section>
 
@@ -108,13 +111,13 @@ export default function Home() {
       <section className="faq sectionPad" id="veelgestelde-vragen">
         <p className="sectionNo">Goed om te weten</p>
         <div className="faqGrid"><h2>Voor je<br /><em>vertrekt.</em></h2><div>
-          <details><summary>Waar ligt Het Berkenbos?<span>+</span></summary><p>In Huarte, Navarra, in het groene noorden van Spanje. De exacte route ontvang je bij je reservering.</p></details>
-          <details><summary>Is het een blokhut?<span>+</span></summary><p>Nee. Het is een karaktervol huis met de eenvoud en warmte van een stuga, maar met een eigen architectuur en verhaal.</p></details>
+          <details><summary>Waar ligt Het Berkenbos?<span>+</span></summary><p>In Hauwert, midden in het open landschap van West-Friesland in Noord-Holland. De exacte route ontvang je bij je reservering.</p></details>
+          <details><summary>Is het een blokhut?<span>+</span></summary><p>Nee. Het is een karaktervolle barnhouse met de eenvoud en warmte van een stuga, maar met een eigen architectuur en verhaal.</p></details>
           <details><summary>Hoe reserveer ik?<span>+</span></summary><p>Via de Airbnb-advertentie van Het Berkenbos. Gebruik de knop hierboven om Airbnb te openen.</p></details>
         </div></div>
       </section>
 
-      <footer><a href="#welkom"><img src="/het-berkenbos-logo.png" alt="Het Berkenbos" /></a><p>Een bijzonder verblijf in Huarte<br />van Selma Kool</p><div><a href="#verblijf">Het verblijf</a><a href="#seizoenen">Seizoenen</a><a href="#reserveren">Reserveren</a></div><span>© 2026 Het Berkenbos</span></footer>
+      <footer><a href="#welkom"><img src="/het-berkenbos-logo.png" alt="Het Berkenbos" /></a><p>Een bijzonder verblijf in Hauwert<br />van Selma Kool</p><div><a href="#verblijf">Het verblijf</a><a href="#seizoenen">Seizoenen</a><a href="#reserveren">Reserveren</a></div><span>© 2026 Het Berkenbos</span></footer>
     </main>
   );
 }
