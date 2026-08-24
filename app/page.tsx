@@ -1,3 +1,5 @@
+import BookingForm from './BookingForm';
+
 const seasons = [
   { number: '01', name: 'Lente', line: 'Alles begint weer.', text: 'Fris groen, vroege zon en het bos dat elke ochtend een beetje voller klinkt.', tone: 'spring' },
   { number: '02', name: 'Zomer', line: 'De deuren blijven open.', text: 'Lange avonden buiten, koel bos aan je voeten en nergens haast voor nodig.', tone: 'summer' },
@@ -105,11 +107,13 @@ export default function Home() {
       <section className="booking" id="reserveren">
         <div className="bookingImage" aria-hidden="true" />
         <div className="bookingShade" aria-hidden="true" />
-        <div className="bookingContent reveal">
-          <p className="eyebrow">Jouw verblijf</p><h2>Wanneer kom<br /><em>jij tot rust?</em></h2>
-          <p>Kies je data op Airbnb en laat de voorpret maar beginnen. Selma zorgt dat het Berkenbos klaarstaat.</p>
-          <div className="bookingActions"><a href="https://www.airbnb.nl/" target="_blank" rel="noreferrer" className="primaryButton">Naar Airbnb <span>↗</span></a><a href="#veelgestelde-vragen" className="textLink">Eerst nog een vraag?</a></div>
-          <small>Je opent Airbnb in een nieuw venster.</small>
+        <div className="bookingShell reveal">
+          <div className="bookingContent">
+            <p className="eyebrow">Jouw verblijf</p><h2>Wanneer kom<br /><em>jij tot rust?</em></h2>
+            <p>Reserveer rechtstreeks bij Selma. Kies je data, vertel met wie je komt en ontvang na je aanvraag een persoonlijke bevestiging.</p>
+            <a href="#veelgestelde-vragen" className="textLink">Eerst nog een vraag?</a>
+          </div>
+          <BookingForm />
         </div>
       </section>
 
@@ -118,7 +122,7 @@ export default function Home() {
         <div className="faqGrid"><h2>Voor je<br /><em>vertrekt.</em></h2><div>
           <details><summary>Waar ligt Het Berkenbos?<span>+</span></summary><p>In Hauwert, midden in het open landschap van West-Friesland in Noord-Holland. De exacte route ontvang je bij je reservering.</p></details>
           <details><summary>Is het een blokhut?<span>+</span></summary><p>Nee. Het is een karaktervolle barnhouse met de eenvoud en warmte van een stuga, maar met een eigen architectuur en verhaal.</p></details>
-          <details><summary>Hoe reserveer ik?<span>+</span></summary><p>Via de Airbnb-advertentie van Het Berkenbos. Gebruik de knop hierboven om Airbnb te openen.</p></details>
+          <details><summary>Hoe reserveer ik?<span>+</span></summary><p>Rechtstreeks op deze website. Kies je data en laat je gegevens achter; Selma bevestigt je aanvraag daarna persoonlijk.</p></details>
         </div></div>
       </section>
 
