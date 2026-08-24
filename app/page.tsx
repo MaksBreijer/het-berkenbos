@@ -20,11 +20,11 @@ export default function Home() {
       </nav>
 
       <section className="hero" id="welkom">
-        <Image src="/instagram-hero.jpg" alt="Zonsondergang bij Het Berkenbos in Hauwert" fill sizes="100vw" className="heroImage" priority />
-        <div className="heroWash" /><div className="heroIndex"><span>52.72° N</span><span>05.10° E</span></div>
+        <Image src="/instagram-lente.jpg" alt="Het open landschap en de bomen bij Het Berkenbos in Hauwert" fill sizes="100vw" className="heroImage" priority />
+        <div className="heroWash" />
         <div className="heroContent">
-          <p>Een buitenverblijf van Selma Cool · Hauwert</p><h1>Het<br /><em>Berkenbos.</em></h1>
-          <div className="heroBottom"><span>Een barnhouse, 3.000 m² tuin<br />en een klein berkenbos.</span><a href="#verblijf">Volg het pad <b>↓</b></a></div>
+          <div className="heroTitle"><p>B&amp;B · Hauwert</p><h1>Het<br /><em>Berkenbos.</em></h1></div>
+          <div className="heroIntro"><span>Een plek om<br />te blijven.</span><p>Een barnhouse, 3.000 m² tuin en een klein berkenbos. Persoonlijk ontvangen door Selma Cool.</p><a href="#verblijf">Ontdek de plek <b>↓</b></a></div>
         </div>
       </section>
 
