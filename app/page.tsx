@@ -18,15 +18,15 @@ export default function Home() {
             <a href="#seizoenen">Vier seizoenen</a>
             <a href="#omgeving">Hauwert</a>
           </div>
-          <a className="navCta" href="#reserveren">Bekijk beschikbaarheid</a>
+          <a className="navCta" href="#reserveren">Boek je buiten</a>
         </nav>
 
         <div className="heroImage" aria-hidden="true" />
         <div className="heroWash" aria-hidden="true" />
         <div className="heroContent">
           <p className="eyebrow">Hauwert · West-Friesland · Noord-Holland</p>
-          <h1>Even verdwijnen.<br /><em>Precies hier.</em></h1>
-          <p className="heroIntro">Een eigenzinnig, warm verblijf tussen de berken. Klein genoeg om persoonlijk te voelen. Groots genoeg om nog lang bij je te blijven.</p>
+          <h1>Buiten voelt<br />hier als <em>thuis.</em></h1>
+          <p className="heroIntro">Een barnhouse, 3.000 m² tuin en een klein berkenbos. Alles wat je nodig hebt om even nergens anders te zijn.</p>
           <div className="heroActions">
             <a className="primaryButton" href="#reserveren">Plan je verblijf <span>→</span></a>
             <a className="textLink" href="#verblijf">Ontdek het huis <span>↓</span></a>
@@ -36,8 +36,13 @@ export default function Home() {
         <div className="scrollCue" aria-hidden="true"><span>Scroll door de seizoenen</span><i /></div>
       </section>
 
+      <a className="floatingBook" href="#reserveren"><span>Vrij?</span> check je data ↗</a>
+
       <section className="promiseStrip" aria-label="Waarom Het Berkenbos">
-        <p><i>01</i> Persoonlijk ontvangen</p><p><i>02</i> 3.000 m² tuin &amp; berkenbos</p><p><i>03</i> Elk seizoen bijzonder</p>
+        <div className="tickerTrack">
+          <span>3.000 m² buiten</span><i>✦</i><span>klein berkenbos</span><i>✦</i><span>barnhouse in Hauwert</span><i>✦</i><span>vier seizoenen</span><i>✦</i>
+          <span aria-hidden="true">3.000 m² buiten</span><i aria-hidden="true">✦</i><span aria-hidden="true">klein berkenbos</span><i aria-hidden="true">✦</i><span aria-hidden="true">barnhouse in Hauwert</span><i aria-hidden="true">✦</i><span aria-hidden="true">vier seizoenen</span><i aria-hidden="true">✦</i>
+        </div>
       </section>
 
       <section className="story sectionPad" id="verblijf">
@@ -54,7 +59,7 @@ export default function Home() {
       <section className="detailsBand">
         <p className="detailsQuote">“Je hoeft hier niets.<br /><em>Dat is precies de bedoeling.</em>”</p>
         <div className="detailsList">
-          <div><span>Slapen</span><p>Rustige nachten tussen bos en heuvels.</p></div>
+          <div><span>Slapen</span><p>Rustige nachten tussen bomen en velden.</p></div>
           <div><span>Leven</span><p>Buiten ontbijten, lezen, koken en lang natafelen.</p></div>
           <div><span>Dwalen</span><p>Van de voordeur zo de paden en het landschap in.</p></div>
         </div>
