@@ -1,0 +1,208 @@
+@import 'tailwindcss';
+
+:root {
+  --ink: #173328;
+  --deep: #10261e;
+  --cream: #f3ecdf;
+  --paper: #e8decd;
+  --gold: #b98b4f;
+  --serif: Georgia, 'Times New Roman', serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; overflow-x: hidden; background: var(--cream); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+a { color: inherit; text-decoration: none; }
+button, input, select { font: inherit; }
+::selection { color: var(--cream); background: var(--ink); }
+.sectionPad { padding-inline: clamp(24px, 8vw, 122px); }
+.sectionNo { margin: 0 0 24px; color: #8a7457; font-size: 10px; font-weight: 700; letter-spacing: .23em; text-transform: uppercase; }
+h2 { margin: 0; font-family: var(--serif); font-size: clamp(50px, 6.3vw, 94px); font-weight: 400; letter-spacing: -.055em; line-height: .91; }
+h2 em { color: #9c7342; font-weight: 400; }
+
+.hero { position: relative; min-height: 100svh; overflow: hidden; background: #182d24; color: #f8f0e3; }
+.heroImage { position: absolute; inset: 0; background: url('/het-berkenbos-hero.png') 58% center / cover; transform: scale(1.01); animation: heroBreath 12s ease-out both; }
+.heroWash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(9,28,21,.89) 0%, rgba(12,32,24,.63) 35%, rgba(12,27,20,.07) 71%), linear-gradient(0deg, rgba(8,20,15,.46), transparent 45%); }
+.nav { position: absolute; z-index: 4; inset: 0 0 auto; height: 112px; display: grid; grid-template-columns: 270px 1fr auto; align-items: center; gap: 36px; padding: 0 clamp(24px,5vw,76px); border-bottom: 1px solid rgba(255,255,255,.23); }
+.logo { display: block; width: 196px; height: 72px; object-fit: contain; object-position: left center; filter: brightness(0) invert(1); }
+.navLinks { display: flex; justify-content: center; gap: 34px; font-size: 11px; text-transform: uppercase; letter-spacing: .14em; }
+.navLinks a { opacity: .84; transition: opacity .2s; }
+.navLinks a:hover { opacity: 1; }
+.navCta { border: 1px solid rgba(255,255,255,.72); padding: 15px 20px; font-size: 10px; text-transform: uppercase; letter-spacing: .14em; transition: .25s ease; }
+.navCta:hover { color: var(--ink); background: #fff; }
+.heroContent { position: relative; z-index: 2; width: min(680px, calc(100% - 48px)); padding-top: clamp(190px,25vh,250px); margin-left: clamp(24px,8vw,122px); }
+.eyebrow { display: flex; align-items: center; gap: 14px; margin: 0 0 28px; color: #d8bd91; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .28em; }
+.eyebrow::before { content: ''; width: 42px; height: 1px; background: currentColor; }
+h1 { margin: 0; max-width: 660px; font-family: var(--serif); font-size: clamp(58px,7.5vw,112px); font-weight: 400; line-height: .84; letter-spacing: -.055em; }
+h1 em { color: #e2c699; font-weight: 400; }
+.heroIntro { max-width: 490px; margin: 34px 0 0 82px; color: rgba(255,255,255,.82); font-family: var(--serif); font-size: clamp(17px,1.5vw,21px); line-height: 1.55; }
+.heroActions { display: flex; align-items: center; gap: 30px; margin: 34px 0 0 82px; }
+.primaryButton { display: inline-flex; align-items: center; justify-content: center; gap: 26px; min-width: 190px; padding: 17px 22px; color: #183126; background: #e5cfaa; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .13em; transition: .25s ease; }
+.primaryButton:hover { background: #fff5e5; transform: translateY(-2px); }
+.primaryButton span { font-size: 18px; }
+.textLink { display: inline-flex; gap: 10px; padding-bottom: 6px; border-bottom: 1px solid currentColor; font-size: 10px; text-transform: uppercase; letter-spacing: .14em; }
+.heroNote { position: absolute; z-index: 2; right: clamp(24px,6vw,92px); bottom: 76px; display: flex; align-items: center; gap: 18px; color: rgba(255,255,255,.75); font-family: var(--serif); font-size: 14px; font-style: italic; line-height: 1.4; }
+.heroNote strong { color: white; font-weight: 400; }
+.noteLine { width: 46px; height: 1px; background: #d3b986; }
+.scrollCue { position: absolute; z-index: 2; left: 24px; bottom: 26px; display: flex; align-items: center; gap: 14px; color: rgba(255,255,255,.64); font-size: 8px; text-transform: uppercase; letter-spacing: .18em; writing-mode: vertical-rl; }
+.scrollCue i { display: block; width: 1px; height: 54px; background: rgba(255,255,255,.4); }
+
+.promiseStrip { display: grid; grid-template-columns: repeat(3, 1fr); min-height: 95px; padding: 0 clamp(24px,8vw,122px); border-bottom: 1px solid rgba(23,51,40,.18); background: #ebe1d2; }
+.promiseStrip p { display: flex; align-items: center; justify-content: center; gap: 18px; margin: 0; border-right: 1px solid rgba(23,51,40,.16); color: #5e6b63; font-family: var(--serif); font-size: 14px; font-style: italic; }
+.promiseStrip p:first-child { border-left: 1px solid rgba(23,51,40,.16); }
+.promiseStrip i { color: #a07e50; font-family: Arial, sans-serif; font-size: 9px; font-style: normal; letter-spacing: .15em; }
+
+.story { display: grid; grid-template-columns: .75fr 1.1fr 1.05fr; gap: clamp(40px,6vw,96px); align-items: start; padding-top: clamp(100px,13vw,190px); padding-bottom: clamp(100px,13vw,180px); background-color: #f2eadf; background-image: radial-gradient(rgba(33,57,47,.08) .55px, transparent .55px); background-size: 6px 6px; }
+.storyKicker span { display: block; margin-bottom: 80px; color: #9c7a52; font-size: 9px; text-transform: uppercase; letter-spacing: .23em; }
+.storyKicker b { font-family: var(--serif); font-size: 19px; font-style: italic; font-weight: 400; line-height: 1.45; }
+.storyBody { padding-top: 78px; }
+.storyBody p { color: #516158; font-size: 15px; line-height: 1.8; }
+.storyBody .lead { margin-top: 0; color: var(--ink); font-family: var(--serif); font-size: clamp(26px,2.6vw,38px); line-height: 1.24; }
+.arrowLink { display: flex; justify-content: space-between; margin-top: 48px; padding: 18px 0; border-top: 1px solid rgba(23,51,40,.35); border-bottom: 1px solid rgba(23,51,40,.35); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .17em; }
+.arrowLink span { font-size: 18px; }
+.storyPhoto { position: relative; aspect-ratio: .78; margin-top: -25px; background: linear-gradient(rgba(20,38,30,.05),rgba(20,38,30,.2)), url('/het-berkenbos-hero.png') 72% center / cover; box-shadow: 22px 25px 0 #d8c9b2; }
+.storyPhoto span { position: absolute; right: -20px; bottom: 24px; padding: 13px 15px; color: #e8dfd2; background: var(--ink); font-size: 8px; line-height: 1.6; letter-spacing: .16em; text-transform: uppercase; }
+
+.detailsBand { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(60px,10vw,160px); align-items: center; padding: clamp(80px,10vw,140px) clamp(24px,8vw,122px); color: #f1e8d9; background: var(--ink); }
+.detailsQuote { margin: 0; font-family: var(--serif); font-size: clamp(34px,4vw,60px); letter-spacing: -.035em; line-height: 1.13; }
+.detailsQuote em { color: #d4b47e; }
+.detailsList { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,.25); }
+.detailsList div { min-height: 180px; padding: 26px 22px 0 0; border-right: 1px solid rgba(255,255,255,.25); }
+.detailsList div + div { padding-left: 22px; }
+.detailsList span { color: #d9bc8e; font-size: 9px; text-transform: uppercase; letter-spacing: .2em; }
+.detailsList p { color: rgba(255,255,255,.68); font-family: var(--serif); font-size: 16px; line-height: 1.55; }
+
+.seasons { padding-top: clamp(110px,12vw,170px); background: #eee4d6; }
+.seasonsHeader { display: grid; grid-template-columns: 1.4fr .6fr; gap: 80px; align-items: end; padding-bottom: 74px; }
+.seasonsHeader > p { max-width: 380px; margin: 0 0 8px; color: #58665e; font-family: var(--serif); font-size: 18px; line-height: 1.65; }
+.seasonsPanorama { position: relative; height: min(55vw, 700px); min-height: 420px; background: url('/het-berkenbos-seizoenen.png') center / cover no-repeat; }
+.seasonsPanorama::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 25px 60px rgba(12,30,23,.13), inset 0 -30px 70px rgba(12,30,23,.25); }
+.seasonLabels { position: absolute; z-index: 2; inset: auto 0 0; display: grid; grid-template-columns: repeat(4, 1fr); color: white; font-family: var(--serif); font-size: 13px; font-style: italic; text-shadow: 0 1px 10px #000; }
+.seasonLabels span { padding: 24px 28px; border-right: 1px solid rgba(255,255,255,.3); }
+.seasonCards { display: grid; grid-template-columns: repeat(4, 1fr); }
+.seasonCard { position: relative; min-height: 440px; padding: 40px clamp(24px,3vw,50px); border-right: 1px solid rgba(23,51,40,.15); color: var(--ink); }
+.seasonCard.spring { background: #dce2bd; }.seasonCard.summer { color: #f5ead9; background: #234b36; }.seasonCard.autumn { color: #f7ead8; background: #895132; }.seasonCard.winter { background: #c9d0ce; }
+.seasonNumber { display: block; margin-bottom: 52px; font-size: 9px; letter-spacing: .2em; opacity: .65; }
+.seasonName { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .22em; }
+.seasonCard h3 { margin: 30px 0 18px; font-family: var(--serif); font-size: clamp(28px,2.5vw,40px); font-weight: 400; line-height: 1.05; }
+.seasonCard > p:last-of-type { max-width: 260px; font-family: var(--serif); font-size: 15px; line-height: 1.6; opacity: .78; }
+.seasonCard a { position: absolute; left: clamp(24px,3vw,50px); right: clamp(24px,3vw,50px); bottom: 38px; display: flex; justify-content: space-between; padding-top: 14px; border-top: 1px solid currentColor; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; }
+
+.place { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(60px,10vw,150px); padding-top: clamp(110px,13vw,190px); padding-bottom: clamp(110px,13vw,190px); background: #f5eee4; }
+.placeImage { position: relative; min-height: 680px; background: linear-gradient(rgba(18,46,34,.08),rgba(18,46,34,.22)), url('/het-berkenbos-seizoenen.png') 39% center / auto 100%; }
+.placeImage::before { content: ''; position: absolute; left: -28px; top: -28px; width: 120px; height: 120px; border-top: 1px solid #a28760; border-left: 1px solid #a28760; }
+.placeImage > p { position: absolute; right: -45px; bottom: 42px; margin: 0; padding: 22px 26px; color: #f0e5d5; background: var(--ink); font-family: var(--serif); font-size: 17px; font-style: italic; line-height: 1.5; }
+.compass { position: absolute; z-index: 2; right: 26px; top: 24px; color: white; font-size: 9px; text-align: center; text-shadow: 0 1px 5px #000; }
+.compass i { display: block; margin-top: 8px; font-size: 26px; font-style: normal; }
+.placeCopy { padding-top: 78px; }
+.placeCopy .lead { margin: 64px 0 22px; color: var(--ink); font-family: var(--serif); font-size: 26px; line-height: 1.4; }
+.placeCopy > p:not(.sectionNo):not(.lead) { color: #59665f; font-size: 15px; line-height: 1.8; }
+.placeNotes { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 45px; }
+.placeNotes span { padding: 10px 13px; border: 1px solid rgba(23,51,40,.3); font-size: 8px; text-transform: uppercase; letter-spacing: .15em; }
+
+.host { position: relative; display: grid; grid-template-columns: .75fr 1.15fr .75fr; gap: 65px; align-items: center; min-height: 750px; overflow: hidden; color: #f0e7d8; background: #142e24; }
+.host::before { content: ''; position: absolute; inset: 0; opacity: .1; background: radial-gradient(#e8d8be .8px, transparent .8px); background-size: 9px 9px; }
+.hostMonogram { position: relative; z-index: 1; align-self: center; color: #d4b47e; font-family: var(--serif); font-size: clamp(230px,28vw,430px); font-style: italic; line-height: .7; opacity: .14; transform: translateX(-35%); }
+.hostCopy, .hostCard { position: relative; z-index: 1; }
+.hostCopy h2 em { color: #d5b27b; }
+.hostCopy > p:not(.sectionNo):not(.signature) { max-width: 600px; margin-top: 45px; color: rgba(255,255,255,.68); font-family: var(--serif); font-size: 18px; line-height: 1.75; }
+.signature { margin: 28px 0 0; color: #d4b47e; font-family: cursive; font-size: 28px; transform: rotate(-4deg); }
+.hostCard { padding: 38px 34px; border: 1px solid rgba(255,255,255,.28); }
+.hostCard span { color: #d5b27b; font-size: 8px; text-transform: uppercase; letter-spacing: .2em; }
+.hostCard p { margin: 30px 0 0; font-family: var(--serif); font-size: 18px; font-style: italic; line-height: 1.65; }
+
+.booking { position: relative; min-height: 880px; display: grid; place-items: center; color: white; }
+.bookingImage, .bookingShade { position: absolute; inset: 0; }
+.bookingImage { background: url('/het-berkenbos-hero.png') center / cover fixed; }
+.bookingShade { background: rgba(8,31,22,.65); }
+.bookingContent { position: relative; z-index: 1; width: min(670px, calc(100% - 48px)); padding: 75px 70px; border: 1px solid rgba(255,255,255,.45); background: rgba(15,45,33,.63); text-align: center; backdrop-filter: blur(8px); }
+.bookingContent .eyebrow { justify-content: center; }
+.bookingContent h2 em { color: #e2c69b; }
+.bookingContent > p:not(.eyebrow) { max-width: 480px; margin: 34px auto 0; color: rgba(255,255,255,.78); font-family: var(--serif); font-size: 17px; line-height: 1.7; }
+.bookingActions { display: flex; justify-content: center; align-items: center; gap: 26px; margin-top: 36px; }
+.bookingContent small { display: block; margin-top: 25px; color: rgba(255,255,255,.54); font-size: 8px; letter-spacing: .13em; text-transform: uppercase; }
+
+.faq { padding-top: clamp(100px,12vw,160px); padding-bottom: clamp(100px,12vw,160px); background: #eee5d8; }
+.faqGrid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 110px; }
+.faq details { border-top: 1px solid rgba(23,51,40,.33); }
+.faq details:last-child { border-bottom: 1px solid rgba(23,51,40,.33); }
+.faq summary { display: flex; justify-content: space-between; padding: 28px 0; cursor: pointer; font-family: var(--serif); font-size: 20px; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary span { font-family: Arial, sans-serif; font-weight: 300; transition: transform .2s; }
+.faq details[open] summary span { transform: rotate(45deg); }
+.faq details p { max-width: 620px; margin: -5px 0 28px; color: #5b675f; line-height: 1.7; }
+
+footer { display: grid; grid-template-columns: 1.2fr 1fr 1fr auto; gap: 50px; align-items: center; min-height: 220px; padding: 45px clamp(24px,6vw,90px); color: #eee5d8; background: #0d211a; }
+footer img { width: 190px; height: 75px; object-fit: contain; filter: brightness(0) invert(1); }
+footer p { color: rgba(255,255,255,.57); font-family: var(--serif); font-size: 14px; line-height: 1.6; }
+footer div { display: flex; flex-direction: column; gap: 10px; font-size: 8px; text-transform: uppercase; letter-spacing: .16em; }
+footer > span { align-self: end; color: rgba(255,255,255,.4); font-size: 8px; text-transform: uppercase; letter-spacing: .13em; }
+
+@keyframes heroBreath { from { transform: scale(1.08); } to { transform: scale(1.01); } }
+@supports (animation-timeline: view()) {
+  .reveal { animation: reveal both linear; animation-timeline: view(); animation-range: entry 5% cover 30%; }
+  @keyframes reveal { from { opacity: 0; transform: translateY(35px); } to { opacity: 1; transform: translateY(0); } }
+}
+
+@media (max-width: 1050px) {
+  .story { grid-template-columns: .5fr 1fr 1fr; gap: 45px; }
+  .detailsBand { grid-template-columns: 1fr; }
+  .seasonCards { grid-template-columns: repeat(2, 1fr); }
+  .place { gap: 70px; }
+  .host { grid-template-columns: 1fr 1fr; }
+  .hostMonogram { display: none; }
+  footer { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 780px) {
+  h2 { font-size: 52px; }
+  .nav { height: 92px; grid-template-columns: 1fr auto; padding: 0 20px; }
+  .navLinks { display: none; }
+  .logo { width: 150px; }
+  .navCta { max-width: 132px; padding: 12px; font-size: 8px; text-align: center; line-height: 1.3; }
+  .heroContent { margin-left: 24px; padding-top: 180px; }
+  .heroIntro, .heroActions { margin-left: 0; }
+  .heroNote, .scrollCue { display: none; }
+  .heroImage { background-position: 65% center; }
+  .promiseStrip { grid-template-columns: 1fr; padding: 10px 24px; }
+  .promiseStrip p, .promiseStrip p:first-child { min-height: 56px; justify-content: flex-start; border: 0; border-bottom: 1px solid rgba(23,51,40,.15); }
+  .story { grid-template-columns: 1fr; }
+  .storyKicker span { margin-bottom: 20px; }
+  .storyBody { padding-top: 0; }
+  .storyPhoto { width: calc(100% - 20px); margin-top: 20px; }
+  .detailsList { grid-template-columns: 1fr; }
+  .detailsList div, .detailsList div + div { min-height: 125px; padding: 22px 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.25); }
+  .seasonsHeader { grid-template-columns: 1fr; gap: 40px; }
+  .seasonsPanorama { min-height: 330px; background-size: auto 100%; background-position: center; overflow-x: auto; }
+  .seasonLabels { font-size: 10px; }
+  .seasonLabels span { padding: 15px 8px; }
+  .seasonCards { grid-template-columns: 1fr; }
+  .seasonCard { min-height: 360px; }
+  .place { grid-template-columns: 1fr; }
+  .placeImage { min-height: 530px; }
+  .placeImage > p { right: -10px; }
+  .placeCopy { padding-top: 15px; }
+  .host { grid-template-columns: 1fr; gap: 60px; padding-top: 100px; padding-bottom: 100px; }
+  .booking { min-height: 740px; }
+  .bookingImage { background-attachment: scroll; }
+  .bookingContent { padding: 55px 24px; }
+  .bookingActions { flex-direction: column; }
+  .faqGrid { grid-template-columns: 1fr; gap: 55px; }
+  footer { grid-template-columns: 1fr; gap: 20px; }
+  footer > span { align-self: auto; margin-top: 25px; }
+}
+
+@media (max-width: 540px) {
+  h1 { font-size: 56px; }
+  .heroIntro { max-width: 90%; }
+  .heroActions { align-items: flex-start; flex-direction: column; gap: 20px; }
+  .story, .place { padding-inline: 24px; }
+  .seasonCards { display: block; }
+  .placeImage { min-height: 440px; }
+  .bookingContent h2 { font-size: 47px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
